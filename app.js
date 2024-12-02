@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 const port = process.env.PORT;
 
 
-//const postRoutes= require("./routes/posts_routes");
-//app.use("/posts",postRoutes);
+const postRoutes= require("./routes/posts_routes");
+app.use("/posts",postRoutes);
 
 const commentRoutes = require("./routes/comment_routes")
 app.use("/comments",commentRoutes)
